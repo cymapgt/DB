@@ -26,17 +26,17 @@ accepts the DB connect settings as an array.
 
 ####Setting The Database Type
 
-DB::setDbType('mysql');
+    DB::setDbType('mysql');
 
 Replace mysql with either of the following: oracle, mssql, sqlite, sybase, drizzle, postgres
 
 ####Getting The Database Type of a Connection
 
-DB::getDbType();
+    DB::getDbType();
 
 ####Get Database Parameters
 
-DB::getDatabaseParameters();
+    DB::getDatabaseParameters();
 
 Return an array of the database parameters stored in the web server / operating system
 environment. The array is an associative array whose indices vary depending on the database
