@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/rhossis/NetBeansProjects/cymapgt/core/utility/db/src">
+  <namespace name="cymapgt\core\utility\db">
+    <class name="DB" src="DB.php" description="class DB" xml="classes/cymapgt_core_utility_db_DB.xml"/>
+  </namespace>
+  <namespace name="cymapgt\Exception">
+    <class name="DBException" src="Exception/DBException.php" description="DBException This is the exception class for the DB service" xml="classes/cymapgt_Exception_DBException.xml"/>
+  </namespace>
+  <namespace name="">
+    <class name="Exception" xml="classes/Exception.xml"/>
+  </namespace>
+</index>

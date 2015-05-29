@@ -16,8 +16,9 @@
     "name" : "cymapgt/db",
     "type" : "library",
     "description" : "Light wrapper around Doctrine DBAL library",
-    "license" : "BSD 3-clause",
+    "license" : "BSD-3-clause",
     "require" : {
+        "php" : ">=5.4.0",
         "doctrine/dbal" : "2.5.*"
     },
     "require-dev" : {

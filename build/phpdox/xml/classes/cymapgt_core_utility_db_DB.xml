@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="cymapgt\core\utility\db\DB" namespace="cymapgt\core\utility\db" name="DB" abstract="false" final="false" start="18" end="280">
+  <file path="/home/rhossis/NetBeansProjects/cymapgt/core/utility/db/src" file="DB.php" realpath="/home/rhossis/NetBeansProjects/cymapgt/core/utility/db/src/DB.php" size="8781" time="2015-05-18T17:05:33+03:00" unixtime="1431957933" sha1="50825757b09ffc9ddb2ed8165aa44b50ec6d8cb2" relative="DB.php"/>
+  <docblock>
+    <description compact="class DB">Light Wrapper around Doctrines DBAL to provide a consistent interface for database connections
+and issue of queries</description>
+    <author value="- Cyril Ogana &lt;cogana@gmail.com&gt;"/>
+    <package value="- cymapgt.core.utility.db"/>
+    <copyright value="- CYMAP BUSINESS SOLUTIONS"/>
+  </docblock>
+  <member name="dbLink" type="{unknown}" visibility="private" line="25">
+    <docblock>
+      <description compact="Instance of the DBAL connection"/>
+      <var type="object">
+        <type full="cymapgt\core\utility\db\Doctrine\DBAL" namespace="cymapgt\core\utility\db\Doctrine" name="DBAL"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="dbType" type="string" default="'mysql'" visibility="private" line="32"/>
+  <member name="dbList" type="array" visibility="private" line="39">
+    <docblock>
+      <description compact="List of supported database platforms"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="setDbType" start="58" end="66" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Static function to set the db type"/>
+      <param type="string" variable="$dbType"/>
+      <return type="object">
+        <type full="cymapgt\core\utility\db\void" namespace="cymapgt\core\utility\db" name="void"/>
+      </return>
+      <throws type="object">
+        <type full="cymapgt\Exception\DBException" namespace="cymapgt\Exception" name="DBException"/>
+      </throws>
+    </docblock>
+    <parameter name="dbType" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDbType" start="73" end="75" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Return the  db type"/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getDatabaseParameters" start="83" end="166" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Returns the db parameters set in the OS / Apache  environment as an array (if any)">@return array</description>
+    </docblock>
+    <inline>
+      <comment value="database specific configuration" line="99"/>
+    </inline>
+  </method>
+  <method name="validateDbParameters" start="178" end="190" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Validate the database parameters provided">@param array $dbParams  - Database parameters for the connection
+
+ @return void</description>
+      <throws type="object">
+        <type full="cymapgt\Exception\DBException" namespace="cymapgt\Exception" name="DBException"/>
+      </throws>
+    </docblock>
+    <parameter name="dbParams" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="validate default option" line="179"/>
+      <comment value="validate that the extension for the DB driver to be used is loaded" line="186"/>
+    </inline>
+  </method>
+  <method name="sanitizeDbParameters" start="199" end="229" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Sanitize the database parameters provided">@param array $dbParams  - Database parameters for the connection
+
+ @return array</description>
+    </docblock>
+    <parameter name="dbParams" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="connectDb" start="238" end="249" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Create a database connection or return singleton connection using environment settings"/>
+      <param description="- Associative array of connection parameters" type="object">
+        <type full="cymapgt\core\utility\db\connectParams" namespace="cymapgt\core\utility\db" name="connectParams"/>
+      </param>
+      <return type="object">
+        <type full="cymapgt\core\utility\db\Doctrine\DBAL" namespace="cymapgt\core\utility\db\Doctrine" name="DBAL"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="connectDbNew" start="258" end="263" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="For new connections that are building transactions"/>
+      <param description="- Database connection parameters" type="array" variable="$dbParams"/>
+      <return type="object">
+        <type full="cymapgt\core\utility\db\Doctrine\DBAL" namespace="cymapgt\core\utility\db\Doctrine" name="DBAL"/>
+      </return>
+    </docblock>
+    <parameter name="dbParams" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="closeDbConnection" start="270" end="279" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Closes the static db connection"/>
+      <return type="object">
+        <type full="cymapgt\core\utility\db\void" namespace="cymapgt\core\utility\db" name="void"/>
+      </return>
+    </docblock>
+  </method>
+</class>

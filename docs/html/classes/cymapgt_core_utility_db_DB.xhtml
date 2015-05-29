@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - cymapgt\core\utility\db\DB</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#cymapgt_core_utility_db">cymapgt\core\utility\db</a>
+          </li>
+          <li class="separator">DB</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/DB.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>cymapgt\core\utility\db\</small>DB</h1>
+        <h4>class DB</h4>
+        <p>Light Wrapper around Doctrines DBAL to provide a consistent interface for database connections<br/>and issue of queries</p>
+        <ul>
+          <li>Author: - Cyril Ogana &lt;cogana@gmail.com&gt;</li>
+          <li>Copyright: - CYMAP BUSINESS SOLUTIONS</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class DB
+            {<br/><ul class="none"><li>// members</li><li>private <span title="cymapgt\core\utility\db\Doctrine\DBAL">DBAL</span> <a href="#members">$dbLink</a>;
+                    </li><li>private string <a href="#members">$dbType</a>;
+                    </li><li>private array <a href="#members">$dbList</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static void <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/setDbType.xhtml">setDbType</a>()
+                    </li><li>public static string <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/getDbType.xhtml">getDbType</a>()
+                    </li><li>public static void <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/getDatabaseParameters.xhtml">getDatabaseParameters</a>()
+                    </li><li>public static void <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/validateDbParameters.xhtml">validateDbParameters</a>()
+                    </li><li>public static void <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/sanitizeDbParameters.xhtml">sanitizeDbParameters</a>()
+                    </li><li>public static DBAL <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/connectDb.xhtml">connectDb</a>()
+                    </li><li>public static DBAL <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/connectDbNew.xhtml">connectDbNew</a>()
+                    </li><li>public static void <a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/closeDbConnection.xhtml">closeDbConnection</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="dbLink"><strong>$dbLink</strong>
+                —
+                <a href="#">cymapgt\core\utility\db\Doctrine\DBAL</a><br/><span class="indent">Instance of the DBAL connection</span></li>
+            <li id="dbList"><strong>$dbList</strong>
+                —
+                array<br/><span class="indent">List of supported database platforms</span></li>
+            <li id="dbType">
+              <strong>$dbType</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="closeDbConnection"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/closeDbConnection.xhtml">closeDbConnection()</a>
+                — Closes the static db connection</li>
+            <li id="connectDb"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/connectDb.xhtml">connectDb()</a>
+                — Create a database connection or return singleton connection using environment settings</li>
+            <li id="connectDbNew"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/connectDbNew.xhtml">connectDbNew()</a>
+                — For new connections that are building transactions</li>
+            <li id="getDatabaseParameters"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/getDatabaseParameters.xhtml">getDatabaseParameters()</a>
+                — Returns the db parameters set in the OS / Apache  environment as an array (if any)</li>
+            <li id="getDbType"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/getDbType.xhtml">getDbType()</a>
+                — Return the  db type</li>
+            <li id="sanitizeDbParameters"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/sanitizeDbParameters.xhtml">sanitizeDbParameters()</a>
+                — Sanitize the database parameters provided</li>
+            <li id="setDbType"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/setDbType.xhtml">setDbType()</a>
+                — Static function to set the db type</li>
+            <li id="validateDbParameters"><a title="cymapgt\core\utility\db\DB" href="../classes/cymapgt_core_utility_db_DB/validateDbParameters.xhtml">validateDbParameters()</a>
+                — Validate the database parameters provided</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.7.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
