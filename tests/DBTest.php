@@ -26,15 +26,23 @@ class DBTest extends \PHPUnit_Framework_TestCase {
        $this->object = DB::connectDbNew($dbParams);
         $sql = "DELETE FROM db_test WHERE 1";
         $this->object->query($sql);
-           
-       $sql = "INSERT INTO db_test (first_name, last_name)
-                VALUES
-                    ('Allesandro', 'Del Piero'),
-                    ('Allesandro', 'Nesta'),
-                    ('Andrea', 'Pirlo'),
-                    ('Paulo', 'Maldini'),
-                    ('Roberto', 'Baggio'),
-                    ('Stephan', 'El Shaarawy')";
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Allesandro', 'Del Piero')";
+       $this->object->query($sql);
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Allesandro', 'Nesta')";
+       $this->object->query($sql);
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Andrea', 'Pirlo')";
+       $this->object->query($sql);
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Paolo', 'Maldini')";
+       $this->object->query($sql);
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Roberto', 'Baggio')";
+       $this->object->query($sql);
+
+       $sql = "INSERT INTO db_test (first_name, last_name) VALUES('Stephan', 'El Shaarawy')";
        $this->object->query($sql);
     }
 
