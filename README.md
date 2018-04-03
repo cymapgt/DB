@@ -24,17 +24,17 @@ accepts the DB connect settings as an array.
 
 ### Getters and Setters
 
-####Setting The Database Type
+#### Setting The Database Type
 
     DB::setDbType('mysql');
 
 Replace mysql with either of the following: oracle, mssql, sqlite, sybase, drizzle, postgres
 
-####Getting The Database Type of a Connection
+#### Getting The Database Type of a Connection
 
     DB::getDbType();
 
-####Get Database Parameters
+#### Get Database Parameters
 
     DB::getDatabaseParameters();
 
