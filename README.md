@@ -30,11 +30,11 @@ accepts the DB connect settings as an array.
 
 Replace mysql with either of the following: oracle, mssql, sqlite, sybase, drizzle, postgres
 
-#### Getting The Database Type of a Connection
+####Getting The Database Type of a Connection
 
     DB::getDbType();
 
-#### Get Database Parameters
+####Get Database Parameters
 
     DB::getDatabaseParameters();
 
