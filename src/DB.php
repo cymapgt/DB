@@ -38,6 +38,7 @@ class DB
      */
     private static $dbList = array (
         'mysql',
+        'mariadb',
         'oracle',
         'postgres',
         'mssql',
@@ -88,13 +89,13 @@ class DB
         $dbPort     = getenv('CYMAPKDB_PORT');
         $dbName     = getenv('CYMAPKDB_DB');
         
-        $dbParams = array(
+        $dbParams = [
             'user'     => (string) $dbUser,
             'password' => (string) $dbPassword,
             'host'     => (string) $dbHost,
             'port'     => (int)    $dbPort,
             'dbname'   => (string) $dbName
-        );
+        ];
                 
         //database specific configuration 
         switch (self::getDbType()) {
@@ -107,6 +108,15 @@ class DB
                 $dbParams['charset']      = (string) $dbCharset;
                 
                 break;
+            case 'mariadb':
+                $dbSocket       = getenv('CYMAPKDB_SOCKET');
+                $dbCharset      = getenv('CYMAPKDB_CHARSET');
+                
+                $dbParams['driver']       = 'pdo_mysql';
+                $dbParams['unix_socket']  = (string) $dbSocket;
+                $dbParams['charset']      = (string) $dbCharset;
+                
+                break;            
             case 'oracle':
                 $dbServicename  = getenv('CYMAPKDB_SERVICENAME');
                 $dbService      = getenv('CYMAPKDB_SERVICE');

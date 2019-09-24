@@ -18,11 +18,11 @@
     "description" : "Light wrapper around Doctrine DBAL library",
     "license" : "BSD-3-clause",
     "require" : {
-        "php" : ">=7.0.0",
+        "php" : ">=7.2.0",
         "doctrine/dbal" : "~2.9.0"
     },
     "require-dev" : {
-        "phpunit/phpunit" : "6.*"
+        "phpunit/phpunit" : "8.*"
     },
     "support" : {
         "email" : "cogana@gmail.com",
